@@ -4,6 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anirudh Shankar - MBA | Corporate Communicator | Podcast Host</title>
+    <meta
+      name="description"
+      content="Anirudh Shankar: MBA, Corporate Communicator, Podcast Host, and Strategic Facilitator. Bridging ideas, inspiring dialogue, and leading through communication."
+    />
+    <meta
+      name="keywords"
+      content="Anirudh Shankar, MBA, Corporate Communicator, Podcast Host, Strategic Facilitator, Leadership, Communication, BIT Mesra"
+    />
+    <meta name="author" content="Anirudh Shankar" />
+    <link rel="canonical" href="https://yourdomain.com/index.html" />
+    <link rel="icon" type="image/png" href="images1/HERO.PNG" />
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Anirudh Shankar - MBA | Corporate Communicator | Podcast Host"
+    />
+    <meta
+      property="og:description"
+      content="Bridging Ideas. Inspiring Dialogue. Leading Through Communication."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/index.html" />
+    <meta property="og:image" content="images1/HERO.PNG" />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Anirudh Shankar - MBA | Corporate Communicator | Podcast Host"
+    />
+    <meta
+      name="twitter:description"
+      content="Bridging Ideas. Inspiring Dialogue. Leading Through Communication."
+    />
+    <meta name="twitter:image" content="images1/HERO.PNG" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -24,6 +58,12 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- AOS Animation CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
   </head>
   <body>
     <!-- Modern Rounded Navigation -->
@@ -33,10 +73,12 @@
           <div class="nav-content">
             <!-- Brand Name -->
             <div class="brand">
-              <h1 class="brand-text">
-                <span class="fw-normal">Anirudh</span>
-                <span class="fw-bold ms-1">Shankar</span>
-              </h1>
+              <a href="index.html" class="brand-link">
+                <h1 class="brand-text">
+                  <span class="fw-normal">Anirudh</span>
+                  <span class="fw-bold ms-1">Shankar</span>
+                </h1>
+              </a>
             </div>
 
             <!-- Desktop Navigation Links -->
@@ -96,7 +138,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section py-5">
+    <section class="hero-section py-5" data-aos="fade-up">
       <div class="container-fluid px-4">
         <div class="row g-5 align-items-center hero-content">
           <!-- Left Content -->
@@ -127,11 +169,11 @@
           <div
             class="col-lg-6 d-flex justify-content-center justify-content-lg-end"
           >
-            <div class="hero-image-container">
+            <div class="hero-image-container" data-aos="zoom-in">
               <img
-                src="images1/Anirudh.JPG"
+                src="images1/HERO.png"
                 alt="Professional workspace"
-                class="hero-image"
+                class="hero-image floating"
               />
               <div class="hero-decoration-1"></div>
               <div class="hero-decoration-2"></div>
@@ -168,33 +210,49 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="stats-section py-5">
+    <section class="stats-section py-5" data-aos="fade-up">
       <div class="container-fluid px-4">
         <h2 class="section-title text-center mb-5">Quick Snapshot</h2>
-        <div class="row g-4">
+        <div class="row g-4 stagger-animation">
           <div class="col-md-6 col-lg-3">
-            <div class="stat-card text-center">
+            <div
+              class="stat-card text-center interactive-element"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div class="stat-icon">🎓</div>
               <h3 class="stat-title">MBA</h3>
               <p class="stat-description">Finance & Marketing<br />BIT Mesra</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="stat-card text-center">
+            <div
+              class="stat-card text-center interactive-element"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div class="stat-icon">👥</div>
               <h3 class="stat-title">President</h3>
               <p class="stat-description">The Academic Forum<br />(TAF)</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="stat-card text-center">
+            <div
+              class="stat-card text-center interactive-element"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div class="stat-icon">🎙️</div>
               <h3 class="stat-title">Podcast Host</h3>
               <p class="stat-description">10+ Industry<br />Conversations</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="stat-card text-center">
+            <div
+              class="stat-card text-center interactive-element"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <div class="stat-icon">🏢</div>
               <h3 class="stat-title">Corporate Partner</h3>
               <p class="stat-description">Tata Steel, JMA<br />Timken India</p>
@@ -205,7 +263,7 @@
     </section>
 
     <!-- Featured Work Section -->
-    <section class="featured-section py-5">
+    <section class="featured-section py-5" data-aos="fade-up">
       <div class="container-fluid px-4">
         <div class="featured-badge mb-4">Featured Work</div>
         <h2 class="featured-title mb-5">
@@ -238,7 +296,9 @@
                 </p>
               </div>
             </div>
-            <button class="btn btn-primary-custom btn-lg">
+            <button
+              class="btn btn-primary-custom btn-lg me-3 mb-3 transition duration-300 hover:scale-105 hover:shadow-lg"
+            >
               Listen to Episode
             </button>
           </div>
@@ -257,9 +317,13 @@
     <section class="services-section py-5">
       <div class="container-fluid px-4">
         <h2 class="section-title text-center mb-5">What I Do</h2>
-        <div class="row g-4">
+        <div class="row g-4 stagger-animation">
           <div class="col-md-6 col-lg-3">
-            <div class="service-card">
+            <div
+              class="service-card interactive-element"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div class="service-icon">🎤</div>
               <h3 class="service-title">Podcast Hosting</h3>
               <p class="service-description">
@@ -270,7 +334,11 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="service-card">
+            <div
+              class="service-card interactive-element"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div class="service-icon">🏢</div>
               <h3 class="service-title">Corporate Facilitation</h3>
               <p class="service-description">
@@ -280,7 +348,11 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="service-card">
+            <div
+              class="service-card interactive-element"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div class="service-icon">📚</div>
               <h3 class="service-title">Research & Insights</h3>
               <p class="service-description">
@@ -290,7 +362,11 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="service-card">
+            <div
+              class="service-card interactive-element"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <div class="service-icon">💼</div>
               <h3 class="service-title">Leadership Development</h3>
               <p class="service-description">
@@ -446,5 +522,31 @@
 
     <!-- Custom JS -->
     <script src="script.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+    <style>
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+      @keyframes floating {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+    </style>
   </body>
 </html>

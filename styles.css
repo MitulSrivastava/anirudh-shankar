@@ -56,6 +56,16 @@ body {
   transform: scale(0.98);
 }
 
+.brand-link {
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand-link:hover {
+  transform: scale(1.05);
+}
+
 .brand-text {
   font-family: "Inter", sans-serif;
   font-size: 1.25rem;
@@ -69,8 +79,12 @@ body {
   color: var(--primary-text);
 }
 
+.brand-text .fw-bold {
+  color: var(--accent-yellow);
+}
+
 .brand-text:hover {
-  transform: scale(1.05);
+  transform: none;
 }
 
 .nav-links {
@@ -1087,22 +1101,66 @@ body {
   height: 1rem;
 }
 
-/* Responsive adjustments */
+/* Enhanced Responsive adjustments with animations */
 @media (max-width: 767.98px) {
   .hero-section {
     padding: 3rem 0;
+  }
+
+  .hero-content {
+    text-align: center !important;
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .hero-image-container {
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+  }
+
+  .hero-image {
+    max-width: 20rem;
+    height: 16rem;
   }
 
   .stats-section {
     padding: 3rem 0;
   }
 
+  .stat-card {
+    margin-bottom: 2rem;
+    animation: slideInUp 0.6s ease-out;
+    transform: translateY(0);
+  }
+
+  .stat-card:hover {
+    animation: pulse 0.6s ease-in-out;
+  }
+
   .featured-section {
     padding: 3rem 0;
   }
 
+  .featured-content {
+    animation: fadeInLeft 0.8s ease-out;
+  }
+
+  .featured-image-container {
+    animation: fadeInRight 0.8s ease-out 0.3s both;
+  }
+
   .services-section {
     padding: 3rem 0;
+  }
+
+  .service-card {
+    margin-bottom: 2rem;
+    animation: fadeInScale 0.6s ease-out;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px) scale(1.02);
   }
 
   .xceptional-section {
@@ -1113,18 +1171,32 @@ body {
   .xceptional-text-content {
     text-align: center;
     margin-bottom: 2rem;
+    animation: fadeInLeft 0.8s ease-out;
   }
 
   .xceptional-highlight-box {
     padding: 2rem 1.5rem;
+    animation: fadeInRight 0.8s ease-out 0.3s both;
   }
 
   .green-flag-section {
     padding: 3rem 0;
   }
 
+  .green-flag-content {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .green-flag-image {
+    animation: bounce 2s infinite;
+  }
+
   .cta-section {
     padding: 3rem 0;
+  }
+
+  .cta-content {
+    animation: fadeInUp 0.8s ease-out;
   }
 
   .nav-content {
@@ -1133,6 +1205,80 @@ body {
 
   .brand-text {
     font-size: 1.125rem;
+  }
+
+  /* Mobile-specific enhancements */
+  .mobile-menu {
+    animation: fadeInRight 0.3s ease-out;
+  }
+
+  .mobile-nav-link {
+    animation: fadeInLeft 0.4s ease-out;
+  }
+
+  .mobile-nav-link:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .mobile-nav-link:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .mobile-nav-link:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .mobile-nav-link:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .mobile-nav-link:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+}
+
+/* Tablet-specific responsive adjustments */
+@media (max-width: 991.98px) and (min-width: 768px) {
+  .hero-section {
+    padding: 4rem 0;
+  }
+
+  .hero-content {
+    text-align: center !important;
+    margin-bottom: 3rem;
+  }
+
+  .hero-image-container {
+    text-align: center;
+  }
+
+  .stats-section .row {
+    justify-content: center;
+  }
+
+  .stat-card {
+    max-width: 300px;
+    margin: 0 auto 2rem auto;
+  }
+
+  .service-card {
+    max-width: 350px;
+    margin: 0 auto 2rem auto;
+  }
+
+  .xceptional-text-content {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .xceptional-highlight-box {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .featured-content {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .featured-image-container {
+    text-align: center;
   }
 }
 
@@ -1172,11 +1318,211 @@ body {
   .xceptional-highlight-box p {
     font-size: 0.9rem;
   }
+
+  /* Enhanced mobile interactions */
+  .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Mobile navigation enhancements */
+  .mobile-menu-content {
+    padding: 2rem 1rem;
+  }
+
+  .mobile-nav-link {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+  }
+
+  /* Touch-friendly spacing */
+  .nav-link {
+    padding: 0.75rem 1rem;
+  }
+
+  .social-icon {
+    padding: 0.75rem;
+  }
+}
+
+/* Enhanced Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobileSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Decorative Elements */
+.decorative-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.floating-circle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-yellow), #ffd700);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-circle:nth-child(2) {
+  animation-delay: 2s;
+  background: linear-gradient(135deg, var(--card-blue), #becbd4);
+}
+
+.floating-circle:nth-child(3) {
+  animation-delay: 4s;
+  background: linear-gradient(135deg, var(--deep-blue), #223e54);
+}
+
+/* Enhanced hover effects */
+.interactive-element {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-element:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Stagger animations for lists */
+.stagger-animation > * {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.stagger-animation > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stagger-animation > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stagger-animation > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stagger-animation > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.stagger-animation > *:nth-child(5) {
+  animation-delay: 0.5s;
 }
 
 /* Custom scrollbar */
@@ -1191,6 +1537,7 @@ html {
 ::-webkit-scrollbar-thumb {
   background: var(--contrast-blue);
   border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
