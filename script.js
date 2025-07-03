@@ -201,42 +201,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   });
 
-  // Add active navigation highlighting based on scroll position
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link");
+  // Add active navigation highlighting based on scroll position (only on home page)
+  const isHomePage =
+    window.location.pathname === "/" ||
+    window.location.pathname.endsWith("/index.html") ||
+    window.location.pathname === "/index.html";
 
-  window.addEventListener("scroll", function () {
-    let current = "";
+  if (isHomePage) {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link");
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
+    window.addEventListener("scroll", function () {
+      let current = "";
 
-      if (window.pageYOffset >= sectionTop - 200) {
-        current = section.getAttribute("id");
-      }
-    });
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
 
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
+        if (window.pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute("id");
+        }
+      });
 
-    // Handle home link
-    if (window.pageYOffset < 100) {
       navLinks.forEach((link) => {
         link.classList.remove("active");
-        if (
-          link.getAttribute("href") === "#" ||
-          link.textContent.trim() === "Home"
-        ) {
+        if (link.getAttribute("href") === `#${current}`) {
           link.classList.add("active");
         }
       });
-    }
-  });
+
+      // Handle home link
+      if (window.pageYOffset < 100) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (
+            link.getAttribute("href") === "#" ||
+            link.textContent.trim() === "Home"
+          ) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
 
   console.log("Anirudh Shankar Portfolio - JavaScript loaded successfully!");
 });
